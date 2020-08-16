@@ -1,15 +1,11 @@
 package com.company.readfiles;
-
 import java.io.*;
 import java.util.*;
 
 
 public class ReadFiles {
 
-
     File file = new File("/Users/wiebehb/Documents/dax/dax-1m.csv");
-
-
 
     int row = 0;
     String[][] items;
@@ -65,18 +61,18 @@ public class ReadFiles {
 
 
     public void printArray() {
-
-        System.out.println(items[0][6]);
-
         for(int x= 0; x < items.length; x++) {
             System.out.printf("%s - ", x);
 
             for(int y = 0; y<items[x].length; y++) {
                 System.out.printf("%s ", items[x][y]);
             }
-
             System.out.println();
         }
     }
-}
 
+
+    public String[][] getArray(){
+        return items;
+    }
+}
