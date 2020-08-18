@@ -2,7 +2,6 @@ package com.company.readfiles;
 import java.io.*;
 import java.util.*;
 
-
 public class ReadFiles {
 
     File file = new File("/Users/wiebehb/Documents/dax/dax-1m.csv");
@@ -10,11 +9,9 @@ public class ReadFiles {
     int row = 0;
     String[][] items;
 
-
     public boolean checkIsFile() {
         return file.isFile();
     }
-
 
     public int findRowNumber() {
         row = 0;
@@ -34,7 +31,6 @@ public class ReadFiles {
         }
         return row;
     }
-
 
     public void convertToArray() {
         int r = 0;
@@ -59,7 +55,6 @@ public class ReadFiles {
         }
     }
 
-
     public void printArray() {
         for(int x= 0; x < items.length; x++) {
             System.out.printf("%s - ", x);
@@ -70,7 +65,6 @@ public class ReadFiles {
             System.out.println();
         }
     }
-
 
     public String[][] getArray(){
         return items;

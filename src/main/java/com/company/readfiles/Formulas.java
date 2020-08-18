@@ -2,16 +2,15 @@ package com.company.readfiles;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-
 public class Formulas {
+
     ReadFiles r = new ReadFiles();
 
     float[][] dataArray = new float[r.findRowNumber()][7];
     Date[] dateArray = new Date[r.findRowNumber()];
 
 
-
-    // convert date in dax file to right format
+    /* convert date in dax file to right format */
 
     public void createDateArray(String[][] n) {
         SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
@@ -32,13 +31,11 @@ public class Formulas {
     }
 
 
-
-    // create a float array for rest of elements
+    /* create a float array for non date columns */
 
     public void createDataArray(String[][] n) {
         for(int x=0; x<n.length; x++) {
             for(int y = 0; y<n[x].length; y++) {
-
                 switch(y) {
                     case 0:
                         dataArray[x][y] = 0;
@@ -72,7 +69,7 @@ public class Formulas {
     }
 
 
-    // print array
+    /* print data array */
 
     public void printArray(){
         for(int x = 0; x< dataArray.length; x++) {
@@ -81,5 +78,9 @@ public class Formulas {
             }
             System.out.println();
         }
+    }
+
+    public float[][] getArray(){
+        return dataArray;
     }
 }
